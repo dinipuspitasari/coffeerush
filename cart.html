@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keranjang</title>
+        <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+        <link rel="stylesheet" href="src/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body id="body-cart">
+        <!-- NAV START -->
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/image/logocr.png" alt="" width="200px">
+                </a>
+            </div>
+            
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li>
+                    <a class="shopping-cart" href="cart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            <div id="cart-amount" class="cart-amount">0</div>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="menu-toggle">
+                <input type="checkbox" name="" id="">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav> 
+        <!-- NAV END -->
+
+        <!-- main start -->
+        <main>
+            <!-- modal start-->
+            <section>
+                <div id="my-modal" class="modal">
+                    <div class="modal-content">
+                        <svg id="exit-modal" class="exit-form" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                        </svg>
+                        <div class="container-modal">
+                            <div class="modal-detail display-none">
+                                
+                            </div>
+                            <div class="modal-form">
+                                <h3>Form pembelian</h3>
+                                <form class="container-form" method="post" action="invoice.php">
+                                    <div class="form-group">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" name="nama" id="nama" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama">Nomor Telepon</label>
+                                        <input type="tel" name="nohp" id="nohp" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama">Email</label>
+                                        <input type="email" name="email" id="email" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama">Alamat</label>
+                                        <input type="text" name="alamat" id="nama" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="metode-bayar">Pembayaran</label>
+                                        <select name="metode-bayar" id="metode-bayar">
+                                            <option value="cash">Tunai</option>
+                                            <option value="debit">Transfer bank</option>
+                                            <option value="cc">Kartu kredit</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-big">
+                                        <label for="metode-kirim">Pengiriman</label>
+                                        <select name="metode-kirim" id="metode-kirim">
+                                            <option value="toko">Ambil ditoko</option>
+                                            <option value="delivery">Diantar kurir Queen Cake</option>
+                                            <option value="ojol">Diantar ojek online</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group form-big">
+                                        <input onclick="saveInputValue()" type="submit" name="submit" id="nama">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- modal end -->
+
+            <section id="cart">
+                <div class="container-satu">
+                    <div class="container-dua-cart">
+                        <div id="cart-product" class="cart-product">
+                            <!-- <h3 class="heading">Keranjang anda kosong!</h3>
+                            <div class="container-empty-cart">
+                                <a href="product.html">
+                                    <button>
+                                        <p>Cek Produk</p>
+                                    </button>
+                                </a>
+    
+                                <a href="index.html">
+                                    <button>
+                                        <p>Kembali ke Beranda</p>
+                                    </button>
+                                </a>
+                            </div> -->
+                            <!-- <div class="heading-cart">
+                                <h4>Nama Produk</h4>
+                                <h4 class="display-none">Kuantitas</h4>
+                                <h4>Total Harga</h4>
+                            </div> -->
+                            <!-- <div class="product-details">
+                                <div class="desc">
+                                    <div class="desc-detail">
+                                        <img class="img-cart" width="100px" src="assets/image/produk/kue-kering/kk-2.png" alt="">
+                                        <div class="desc-harga">
+                                            <h4>Kue tart</h4>
+                                            <p>Rp. 100.000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qty">
+                                    <div class="qty-detail">
+                                        <button class="decrement" onclick="decrement()" >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                            </svg>
+                                        </button>
+                                        <p id=""">0</p>
+                                        <button class="increment" onclick="increment()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <div class="total-detail">
+                                        <p>Rp. 100.000</p>
+                                    </div>
+                                </div>
+                                <svg class="svg-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                                </svg>
+                            </div> -->
+                        </div>
+                        <div id="cart-total" class="cart-total">
+                            <h3 class="heading-total">Total Belanja</h3>
+                            <div class="total-desc">
+                                <div id="final-total" class="final-total">
+
+                                </div>  
+                            </div>
+                            <div class="button-total">
+                                <button onclick="openModal()" class="check-out">Proses</button>
+                                <button onclick="clearCart()" class="remove-item">Kosongkan keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+
+        <!-- FOOTER START -->
+    <footer>
+        <div class="container-satu-footer">
+          <div class="container-dua-footer line">
+            <div class="description-satu">
+              <div class="profile">
+                <h3 class="padding-bottom">Coffee Rush</h3>
+                <p class="justify-text">
+                  Coffee Rush merupakan cafe khayalan yang tertetak di negeri nan
+                  jauh. Coffee Rush tidak terinsipirasi dari apapun karena
+                  tiba-tiba muncul untuk menyelesaikan tugas bootcamp.
+                </p>
+              </div>
+  
+              <div class="open">
+                <p>Senin - Jum'at : 8AM - 5PM</p>
+                <p>Sabtu : 8AM - 3PM</p>
+              </div>
+            </div>
+  
+            <div class="description-dua">
+              <div class="social-media">
+                <ul class="ul ul-res-1">
+                  <li>
+                    <a href="https://web.whatsapp.com/">
+                      <img src="assets/image/icons-white (3).png" alt="" />
+                      <p class="display-none">+62 815-1323-8732</p>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="">
+                      <img src="assets/image/icons-white (4).png" alt="" />
+                      <p class="display-none">@coffeerush_mantap</p>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="">
+                      <img src="assets/image/icons-white (2).png" alt="" />
+                      <p class="display-none">@coffeerush_mantap</p>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="">
+                      <img src="assets/image/icons-white (1).png" alt="" />
+                      <p class="display-none">coffeerush@gmail.com</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="nav-footer">
+                <ul class="ul display-none">
+                  <li>
+                    <a href="about.html">Tentang Kami</a>
+                  </li>
+                  <li>
+                    <a href="product.html">Produk</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Kontak</a>
+                  </li>
+                  <li>
+                    <a href="store.html">Lokasi Toko</a>
+                  </li>
+                  <li>
+                    <a href="order.html">Cara pemesanan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="p-footer">
+            <p>Copyright &#169; Coffee Rush All Right Reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER END -->
+        <script src="https://unpkg.com/@develoka/angka-rupiah-js/index.min.js"></script>
+        <script src="src/productData.js"></script>
+        <script src="src/cart.js"></script>
+        <script src="src/script.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>
+

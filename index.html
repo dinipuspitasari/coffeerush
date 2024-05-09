@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Rush</title>
+    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- NAV START -->
+    <nav>
+      <div class="logo">
+        <a href="#">
+          <img src="assets/image/logocr.png" alt="" width="200px" />
+        </a>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="product.html">Produk</a></li>
+        <li><a href="contact/contact_form.html">Kontak</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li>
+          <a class="shopping-cart" href="cart.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-cart3"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+              <div id="cart-amount" class="cart-amount">0</div>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="menu-toggle">
+        <input type="checkbox" name="" id="" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- NAV END -->
+
+    <!-- MAIN START -->
+    <main>
+      <!-- CAROUSEL -->
+      <section>
+        <div id="slideshow-example" data-component="slideshow">
+          <div role="list">
+            <!-- <div class="slider">           
+                            <div class="container-jumbotron">
+                                <div class="jumbotron-teks">
+                                    <img src="assets/image/logo-nav.svg" alt="">
+                                    <h3>Selamat datang di Queen Cake</h3>
+                                    <p>Toko kue No.1 di Indonesia</p>
+                                    <a href="product.html">
+                                        <button type="button">Pesan sekarang!</button>
+                                    </a>
+                                </div>
+                                <div class="jumbotron-img">
+                                    <img src="assets/image/jumbotron/kue tart no bg.png" alt="">
+                                </div>
+                            </div>
+                        </div> -->
+            <div class="slider">
+              <div class="container-jumbotron bg-1">
+                <div class="jumbotron-teks">
+                  <img
+                    class="change-img-2"
+                    src="assets/image/logo1.png"
+                    alt=""
+                  />
+                  <h3>Caramel Frappuccino®</h3>
+                  <p>
+                    Coffee Caramel Frappuccino jenis kopi yang disukai banyak
+                    orang. Caramel Frappuccino ini perpaduan dari kopi, es,
+                    susu, dan sirup caramel yang rasanya dijamin enak.
+                  </p>
+                  <a href="product.html">
+                    <button type="button">Pesan sekarang!</button>
+                  </a>
+                </div>
+                <div class="jumbotron-img img-small">
+                  <img
+                    src="assets/image/jumbotron/Caramel Frappuccino®.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEST SELLER -->
+      <section id="best-seller">
+        <div class="container-satu">
+          <h2 class="heading">PRODUK TERLARIS</h2>
+          <div class="container-dua">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="container-items"
+            >
+              <div class="container-img">
+                <img
+                  src="assets/image/Best seller/caramel frapuccino.jpg"
+                  alt="Caramel Frappuccino"
+                />
+              </div>
+              <div class="container-teks">
+                <p>Caramel Frappuccino</p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              class="container-items"
+            >
+              <div class="container-img">
+                <img
+                  src="assets/image/Best seller/plain bagel2.png"
+                  alt="plain bagel"
+                />
+              </div>
+              <div class="container-teks">
+                <p>Plain Bagel</p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="4000"
+              class="container-items"
+            >
+              <div class="container-img">
+                <img
+                  src="assets/image/Best seller/espresso-con-panna.jpg"
+                  alt="espresso-con-panna"
+                />
+              </div>
+              <div class="container-teks">
+                <p>Espresso Con Panna</p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="5000"
+              class="container-items"
+            >
+              <div class="container-img">
+                <img src="assets/image/Best seller/latte2.jpg" alt="late" />
+              </div>
+              <div class="container-teks">
+                <p>Latte</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- layanan start -->
+      <section id="layanan">
+        <div class="container-satu color-2">
+          <h2 class="heading">LAYANAN KAMI</h2>
+          <div class="container-dua align-item-center">
+            <div
+              data-aos="flip-left"
+              data-aos-duration="3000"
+              class="container-layanan"
+            >
+              <div class="heading-layanan">
+                <img src="assets/image/layanan/layanan-toko.png" alt="toko" />
+                <h3>PENGAMBILAN DI TOKO</h3>
+              </div>
+              <div class="deskripsi-layanan">
+                <p>
+                  Pesan di website dan ambil langsung kopimu di toko terdekat
+                </p>
+              </div>
+              <div class="button-layanan">
+                <a href="store.html\">
+                  <button>Lokasi Toko</button>
+                </a>
+              </div>
+            </div>
+
+            <div
+              data-aos="flip-right"
+              data-aos-duration="4000"
+              class="container-layanan flex-grow"
+            >
+              <div class="heading-layanan">
+                <img
+                  src="assets/image/layanan/truk-layanan.png"
+                  alt="pengiriman"
+                />
+                <h3>PENGIRIMAN SELURUH INDONESIA</h3>
+              </div>
+              <div class="deskripsi-layanan">
+                <p>
+                  Nikmati kopi terbaik Coffee Rush di manapun kamu berada dengan
+                  layanan pengiriman ke seluruh Indonesia
+                </p>
+              </div>
+              <div class="button-layanan">
+                <a href="product.html">
+                  <button>Pesan Sekarang</button>
+                </a>
+              </div>
+            </div>
+
+            <div
+              data-aos="flip-right"
+              data-aos-duration="3000"
+              class="container-layanan"
+            >
+              <div class="heading-layanan">
+                <img src="assets/image/layanan/delivery-layanan.png" alt="" />
+                <h3>LAYANAN ANTAR</h3>
+              </div>
+              <div class="deskripsi-layanan">
+                <p>
+                  Pengantaran cepat dan aman dengan kurir Coffee Rush yang
+                  berpengalaman
+                </p>
+              </div>
+              <div class="button-layanan">
+                <a href="product.html">
+                  <button>Pesan Sekarang</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- layanan end -->
+
+      <!-- TESTIMONIAL -->
+      <section>
+        <div class="container-satu">
+          <h2 class="heading">TESTIMONI PELANGGAN KAMI</h2>
+          <div class="container-dua">
+            <div class="card">
+              <img src="assets/image/mei-mei.png" alt="" />
+              <div class="card-description">
+                <div class="testi">
+                  <p>"Saya suka, saya suka"</p>
+                </div>
+                <div class="testi-header">
+                  <h3>Mei-mei</h3>
+                  <p>Jakarta</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/image/mail.png" alt="" />
+              <div class="card-description">
+                <div class="testi">
+                  <p>"Dua singgit, dua singgit, dua singgit"</p>
+                </div>
+                <div class="testi-header">
+                  <h3>Ismail bin Mail</h3>
+                  <p>Jakarta</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/image/jarjit.png" alt="" />
+              <div class="card-description">
+                <div class="testi">
+                  <p>"Dua tiga tutup botol, saya suka kue"</p>
+                </div>
+                <div class="testi-header">
+                  <h3>Jarjit Singh</h3>
+                  <p>Jakarta</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/image/ehsan.png" alt="" />
+              <div class="card-description">
+                <div class="testi">
+                  <p>
+                    "Cita-cita saya ingin membuat toko kue seperti toko ini!"
+                  </p>
+                </div>
+                <div class="testi-header">
+                  <h3>Ehsan</h3>
+                  <p>Jakarta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE -->
+      <section>
+        <div class="container-satu-quote pb color-2">
+          <div class="container-dua-quote">
+            <div class="container-quote">
+              <img
+                class="logo-quote"
+                src="assets/image/logo1.png"
+                alt=""
+                width="150px"
+              />
+              <p>
+                Coffee Rush adalah cafe yang menyediakan berbagai macam minuman
+                baik non-coffee ataupun coffee. Signature dari cafe ini ada
+                Milky Rush yaitu kopi susu yang biji kopinya digiling sendiri
+                oleh sang barista. Setiap orang yang minum di Coffee Rush
+                dijamin bakalan gak bisa move on deh.
+              </p>
+            </div>
+            <div class="container-video">
+              <div class="video">
+                <video width="200px" autoplay loop>
+                  <source src="assets/image/video/bagel.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="video">
+                <video width="200px" autoplay loop>
+                  <source
+                    src="assets/image/video/coffee.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer>
+      <div class="container-satu-footer">
+        <div class="container-dua-footer line">
+          <div class="description-satu">
+            <div class="profile">
+              <h3 class="padding-bottom">Coffee Rush</h3>
+              <p class="justify-text">
+                Coffee Rush merupakan cafe khayalan yang tertetak di negeri nan
+                jauh. Coffee Rush tidak terinsipirasi dari apapun karena
+                tiba-tiba muncul untuk menyelesaikan tugas bootcamp.
+              </p>
+            </div>
+
+            <div class="open">
+              <p>Senin - Jum'at : 8AM - 5PM</p>
+              <p>Sabtu : 8AM - 3PM</p>
+            </div>
+          </div>
+
+          <div class="description-dua">
+            <div class="social-media">
+              <ul class="ul ul-res-1">
+                <li>
+                  <a href="https://web.whatsapp.com/">
+                    <img src="assets/image/icons-white (3).png" alt="" />
+                    <p class="display-none">+62 815-1323-8732</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="assets/image/icons-white (4).png" alt="" />
+                    <p class="display-none">@coffeerush_mantap</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="assets/image/icons-white (2).png" alt="" />
+                    <p class="display-none">@coffeerush_mantap</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="assets/image/icons-white (1).png" alt="" />
+                    <p class="display-none">coffeerush@gmail.com</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav-footer">
+              <ul class="ul display-none">
+                <li>
+                  <a href="about.html">Tentang Kami</a>
+                </li>
+                <li>
+                  <a href="product.html">Produk</a>
+                </li>
+                <li>
+                  <a href="contact.html">Kontak</a>
+                </li>
+                <li>
+                  <a href="store.html">Lokasi Toko</a>
+                </li>
+                <li>
+                  <a href="order.html">Cara pemesanan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-footer">
+          <p>Copyright &#169; Coffee Rush All Right Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="https://unpkg.com/@develoka/angka-rupiah-js/index.min.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+    <script type="text/javascript" src="src/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
