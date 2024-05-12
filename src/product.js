@@ -1,9 +1,5 @@
-let productTart = document.getElementById("container-product-tart");
-let filteredTart = productData.filter((productData) => productData.type == "tart"
-);
-
-let productBolu = document.getElementById("container-product-bolu");
-let filteredBolu = productData.filter((productData) => productData.type == "bolu"
+let productKopi = document.getElementById("container-product-kopi");
+let filteredKopi = productData.filter((productData) => productData.type == "kopi"
 );
 
 let productRoti = document.getElementById("container-product-roti");
@@ -14,8 +10,8 @@ let productKueKering = document.getElementById("container-product-kue-kering");
 let filteredKueKering = productData.filter((productData) => productData.type == "kue kering"
 );
 
-let generateTart = () => {
-    return (productTart.innerHTML = filteredTart
+let generateKopi = () => {
+    return (productKopi.innerHTML = filteredKopi
     .map((x) => {
         let { id, name, price, img } = x;
         return `
@@ -30,22 +26,6 @@ let generateTart = () => {
     .join(""));
 };
 
-// bolu
-let generateBolu = () => {
-    return (productBolu.innerHTML = filteredBolu
-    .map((x) => {
-        let { id, name, price, img } = x;
-        return `
-        <div id=product-id-${id}} class="product">
-            <img  class="img-product" width="200px" src=${img} alt="">
-            <h3 class="product-name">${name}</h3>
-            <p class="price">${toRupiah(price, {spaceBeforeUnit: true, dot: '.', floatingPoint: 0})}</p>    
-            <button id="${id}" onclick="addToCart(${id})" class="button-cart">Masukkan ke keranjang</button>
-        </div>
-        `;
-    })
-    .join(""));
-};
 
 // roti
 let generateRoti = () => {
@@ -81,8 +61,7 @@ let generateKueKering = () => {
     .join(""));
 };
 
-generateTart();
-generateBolu();
+generateKopi();
 generateRoti();
 generateKueKering();
 
