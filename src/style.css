@@ -1080,6 +1080,7 @@ nav ul li a:hover::before {
 .container-dua-contact {
   width: 40%;
   display: flex;
+  padding: 10px;
   justify-content: center;
   background-color: #fff2d5;
   border-radius: 5px;
